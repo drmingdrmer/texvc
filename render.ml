@@ -5,7 +5,7 @@ let cmd_convert tmpprefix finalpath = "convert -quality 100 -density 120 " ^ tmp
 (* Putting -bg Transparent in dvipng's arguments will give full-alpha transparency *)
 (* Note that IE have problems with such PNGs and need an additional javascript snippet *)
 (* Putting -bg transparent in dvipng's arguments will give binary transparency *)
-let cmd_dvipng tmpprefix finalpath = "dvipng -fg 'rgb 0.2 0.2 0.2' -Q 8 -gamma 1 -D 240 -T tight --strict " ^ tmpprefix ^ ".dvi -o " ^ finalpath ^ " >/dev/null 2>/dev/null"
+let cmd_dvipng tmpprefix finalpath = "dvipng -fg 'rgb 0.2 0.2 0.2' -Q 8 -gamma 1 -D 150 -T tight --strict " ^ tmpprefix ^ ".dvi -o " ^ finalpath ^ " >/dev/null 2>/dev/null"
 
 exception ExternalCommandFailure of string
 
